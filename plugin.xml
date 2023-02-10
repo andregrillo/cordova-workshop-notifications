@@ -22,7 +22,7 @@
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="MyNotifications">
-				<param name="android-package" value="outsystems-plugin-mynotifications.MyNotifications" />
+				<param name="android-package" value="outsystems.plugin.mynotifications.MyNotifications" />
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
