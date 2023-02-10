@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="outsystems-plugin-mynotifications" version="1.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>MyNotifications</name>
+	<js-module name="MyNotifications" src="www/MyNotifications.js">
+		<clobbers target="cordova.plugins.MyNotifications" />
+	</js-module>
+	<platform name="ios">
+
+		<!-- Hooks for Swift Support -->
+        <hook type="after_plugin_add" src="hooks/install_prerequisites.js"/>
+        <hook type="after_plugin_install" src="hooks/add_swift_support.js" />
+
+		<config-file parent="/*" target="config.xml">
+			<feature name="MyNotifications">
+				<param name="ios-package" value="MyNotifications" />
+			</feature>
+		</config-file>
+		 <source-file src="src/ios/MyNotifications.swift" />
+	</platform>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="MyNotifications">
+				<param name="android-package" value="outsystems-plugin-mynotifications.MyNotifications" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<source-file src="src/android/MyNotifications.java" target-dir="src/outsystems-plugin-mynotifications/MyNotifications" />
+	</platform>
+</plugin>

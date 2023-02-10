@@ -1,0 +1,14 @@
+{
+  "name": "MyNotifications",
+  "version": "1.0",
+  "description": "A linda descrição das batatinhas",
+  "cordova": {
+    "id": "outsystems-plugin-mynotifications",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "author": "Eu que fiz",
+  "license": "MIT"
+}
